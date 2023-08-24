@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<HTml lang="en">
+<head>
+    <meta charset="UTF=8">
+    <meta name="viewport" content="widh=devide-widh, initial-scale=1.0">
+    <title>FORMULARIO</title>
+    <link rel="stylesheet" href="./css/frmcontacto.css">
+</head>
+<body>
+    <header>    
+        <img src="./img/incap.png" alt="" width="100" height="100">
+        <H1>FORMULARIO INCAP </H1>
+    </header>
+    <nav>
+        <p>Este formulario es para registrar el ingreso de un estudiante a Incap</p>
+    </nav>
+    <section>   
+        <form action="">
+            <fieldset>
+                <label for="">Nombre completo:</label>
+                <input type="text" placeholder="ingrese su nombre" autofocus required><br><br> 
+                <label for="">EMAIL</label>
+                <input type="email" name="" id="" placeholder="ingrese su correo personal"required> <br><br>
+                <label for="">Contraseña</label>
+                <input type="password" placeholder="ingrese su contraseña personal" required><br><br>
+                <!-- seccion de control checkbox -->
+                <label for="">Selecciones tus hobbies</label><br>
+                <input type="checkbox">Cine
+                <input type="checkbox">Lectura
+                <input type="checkbox">Deporte
+                <br><br>
+                <!-- seccion de control radio -->
+                <label for=""> Estado civil</label>
+                <input type="radio" value="casado">Casado(a) 
+                <input type="radio" value="soltero">Soltero(a) 
+                <input type="radio" value="viudo">Viudo(a) 
+                <br><br>
+                <!-- seccion de control de lista opciones -->
+                <label for="">Programas tecnicos Incap</label>
+                <select name="" id="">
+                    <option value="">seleccione programa...</option><br>
+                    <option value="sistemas">Programacion BBDD</option><br>
+                    <option value="diseño">Diseñop grafico</option><br>
+                    <option value="Contabilidad">Contabilidad</option><br>
+                </select>
+                <br>
+                <input type="date" title="ingrese su fecha de nacimiento" > 
+                <br><br>
+                <label for="">Coloca tu edad</label>
+                <input type="number" min="1" max="120" title="ingrese su edad actual">
+                <br><br>
+                <label for="">Suba su foto reciente</label>
+                <input type="file">
+                <br><br>
+                <label for="">comentario</label>
+                <br>
+                <textarea name="" id="" cols="40" rows="5"></textarea>
+            </fieldset>
+            <br><br>
+            <button type="submit">Enviar</button>
+            <button type="reset">Cancelar</button>
+        </form>
+    </section>
+    <footer>
+        <cite>Derechos reservados &copy;2023 @marlon</cite>
+    </footer>
+
+
+    
+</body>
+</HTml>
