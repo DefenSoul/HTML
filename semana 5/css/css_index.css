@@ -1,7 +1,7 @@
-{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
 }
 html{
     max-height: 100;
@@ -14,3 +14,226 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+#header{
+    background-color: chartreuse;
+    border: 2px solid red;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    grid-area: header; /* css grid */
+}
+ul{
+    padding: 0 0;
+    margin: 0 1px;
+}
+li{
+    display: inline;
+    list-style:none;
+    margin: 0 5px ;
+    font: bold 12px verdana ;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+#menu{
+    grid-area: nav; /* css grid */
+    background-color: brown;
+    border: 2px solid yellowgreen;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+}
+#buscarbox input{
+    height: 25px;
+    width: 0px;
+    padding: 0;
+    border-radius: 40px;
+    border:0px ;
+    padding-right:50px ;
+    transition: 0.8s ease ;
+}
+#buscarbox input:hover{
+    width: 150px;
+    padding-left: 10px;
+    outline: none;
+}
+#main{
+    grid-area: main; /* css grid */
+    background-color:rgba(255,255,255,0.6);
+    backdrop-filter:blur(5px);
+    border: 2px solid green;
+    max-width: 100%;
+    height: auto;
+}
+figure{
+    display: inline;
+    margin: 45px;
+    padding: 5px;
+}
+.programa{
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    width: 45%;
+    height: 200px;
+    position: relative;
+    border: 1px solid blueviolet;
+    border-radius: 15px;
+}
+section article{
+    background-color:rgba(255,255,255,0.6);
+    backdrop-filter:blur(5px);
+    margin: 20px;
+}
+#sidebar{
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(255,255,255,0.6);
+    backdrop-filter:blur(5px);
+}
+iframe{
+    max-width: 100%;
+    height: auto;
+}
+#footer{
+    grid-area: footer; /* css grid */
+    padding-top: 20px;
+    border: 2px solid goldenrod;
+    border-radius: 20px;
+    clear: both;
+    background-color:rgba(255,255,255,0.6);
+    backdrop-filter:blur(5px);
+}
+#redes a{
+    padding: 5px;
+    margin: 0px;
+}
+#redes a i:hover{
+    transform: scale(1.5);
+}
+i[class^="fa"]{
+    color: grey;
+    font-size: 20px;
+    border: 1px solid transparent;
+}
+/* SECCION DE CSS GRID EN DISEÑO WEB RESPONSIVE */
+/* DEFINICION DE CONTENEDOR GRID PARA PC 3 COLUMNAS*/
+#grid-container > * {
+text-align: center;
+box-shadow: 1px 1px 7px 0px rgba(13, 36, 97, 0.221);
+}
+#grid-container{
+    display: grid;
+    grid-gap: 10px;
+    grid-template: 
+    "header header header" 150px
+    "nav nav nav" 50px
+    "main main sidebar" 300px
+    "main main sidebar" 300px
+    "main main sidebar" 250px
+    "footer footer footer" 150px /
+    1300px 150px 300px;
+    }
+    /* DEFINICION DE CONTENEDOR GRID TABLES 2 COLUMNAS */
+    @MEDIA (max-width:1024px){
+        #grid-container{
+            grid-template:
+            "header header" 170px
+            "nav main" 800px
+            "nav main" 700px
+            "sidebar sidebar" 650px
+            "footer footer" 100px  /
+            250px 450px ;
+        }
+        h1{
+            font-size: 75%;
+        }
+
+        #menu{
+            background-color: blue;
+            border-radius: 22px;
+            display: block;
+            padding: 45px;
+            margin:40px;
+            height: auto;
+            text-align: center;
+        }
+        #main{
+        display: flex;
+        flex-direction: column;/* cambia la forma de direccion de fila a col*/
+        justify-content: space-between;
+        align-items:center;
+        flex-wrap: wrap;/*se define el auto ajuste de ancho dispostivo pasa a sgte. linea*/
+        max-width:100%;}
+        .programa{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items:center;
+            flex-wrap: wrap;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid black; 
+            
+        }
+        iframe{
+            max-width: 100%;
+            height: auto;
+        }
+        #buscarbox{
+            display:block;
+            padding: 5px;
+        }
+
+    }
+    /* DEFINICION CONTENEDOR GRID CELULAR 1 COLUMNA*/
+    @media (max-width:640px){
+        #grid-container{
+            grid-template:
+            "header"150px
+            "nav" 50px
+            "main" 1120px
+            "sidebar" 800px
+            "footer" 100px /
+            500px;
+            font-size: 60%;
+        }
+#menu{
+    display: none;
+}
+#main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items:center;
+        flex-wrap: wrap;
+        max-width: 100%;
+        height: auto;
+      }
+ .programa{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid black; 
+    }
+ iframe{
+    max-width: 100%;
+    height: auto;
+}
+#buscarbox{
+    display:none;
+}
+    }
