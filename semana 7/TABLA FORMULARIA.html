@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM TABLE</title>
+    <!-- link para hoja de estilos css  -->
+    <link rel="stylesheet" href="./table_form.css">
+</head>
+<body>
+    <h1>CONTACTENOS</h1>
+    <br>
+    <form action="datos.php">
+        <table>
+            <caption>DATOS BASICO USUARIO</caption>
+            <tr><th>NOMBRE</th><td><input type="text" size="30" placeholder="ingrese nombre" required></td></tr>
+            <tr><th>APELLIDOS</th><td><input type="text" size="40" placeholder="ingrese apellidos" required></td></tr>
+            <tr><th>GENERO</th><td><input type="radio" value="f">Femenino <input type="radio" value="m" >Masculino</td></tr>
+            <tr><th>NIVEL ESTUDIOS</th><td><select><option>Primaria</option><option>Secundaria</option><option>Tecnico</option><option>Tecnológico</option><option>Profecional</option></select></td></tr>
+            <tr><th>CONTRASEÑA</th><td><input type="password"></td></tr>
+            <tr><th><input type="submit" value="ENVIAR"></th><td><input type="reset" value="BORRAR"></td></tr>
+        </table>
+
+
+
+    </form>
+    
+</body>
+</html>

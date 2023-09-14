@@ -1,0 +1,27 @@
+body{
+    background: linear-gradient(red,blue);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+body h1{
+    font-family: Comic Sans ms;
+    text-align: center;
+    color: aqua;
+}
+form table{
+    width: 60%;
+    margin: 2px auto;
+}
+form table caption{
+    font-size: 22px;
+    color: orange;
+    padding: 10px;
+}
+form table th,td{
+    width: 25%;
+    text-align: left;
+    vertical-align: top;
+    border: 2px solid black ;
+    padding: 3px;
+}
