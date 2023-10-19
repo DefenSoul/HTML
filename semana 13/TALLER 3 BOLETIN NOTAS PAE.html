@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOLETIN DE NOTAS</title>
+    <!-- link de sitio Sweetalert mensajes más elegantes-->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+        <center>
+            <img src="./img/incap 13.jpeg" alt="" width="150" height="150">
+            <h1>BOLETIN DE NOTAS</h1>
+            <h2>MATERIA PAE0_ JAVASCRIPT</h2>
+            <h3>NOTAS [1 =DESEMPEÑO, 2=TALLERES, 3=EXAMENES]</h3>
+            <br>
+            <script>
+                // VARIABLRES ENTRADA
+                let nota_Std, suma, prom;
+                suma=0;
+                prom=0;
+                num=1;
+                // Entrada
+                nomb_Std=prompt("Ingrese nombre estudiante");
+                // Proceso ciclo while ingreso de tres notas del estudiante
+                while (num<=3) {
+                    nota_Std=parseFloat(prompt("Ingrese nota:[1 a 5]"));
+                    suma+=nota_Std;//sumador notas std
+                    num++;// Contador de notas std
+                }
+                prom=suma/(num-1);
+                if (prom>=3) {
+                    swal("Apreciado estudiante","APROBASTE MATERIA PAE JAVASCRIPT","success");
+                }else{
+                    swal("Apreciado estudiante","REPROBASTE MATERIA PAE JAVASCRIPT","error");
+                }
+                //SALIDA PANTALLA
+                document.write("***********************************************************");
+                document.write("<br>")
+                document.write("<font color='blue' size=12>Estudiante:"+nomb_Std+"</font>"+"<br>"+"<br>");
+                document.write("<font color='red' size=12>NOTA FINAL DE PROGRAMACION :..."+prom.toFixed(2)+"</font>"+"<br>"+"<br>");
+                document.write("***********************************************************");
+            </script>
+        </center>
+</body>
+</html>

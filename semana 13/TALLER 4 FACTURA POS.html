@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura POS</title>
+</head>
+<body>
+    <center>
+        <h1>CICLO WHILE</h1>
+        <h2>FACTURA DE VENTAS POS</h2>
+        <br>
+        <script>
+        // VARIABLE ENTRADA
+        var nombrep;
+        var suma=0;
+        var subt =0; 
+        var netop =0;
+        var desc =0;
+        var iva =0;
+        var num =1;
+        var opc =true; // var ciclo while
+        nom_std=prompt("Ingrese nombre del estudiante");
+        //CICLO WHILE
+        while (opc==true){
+        nombrep=prompt("Ingrese producto a comprar");
+        precio=parseFloat(prompt("Ingrese precio producto"));
+        cant=parseFloat(prompt("Ingrese cantidad a comprar.."));
+        opc=confirm("Desea contnuar facturando..? -- > [SI=ACEPTAR / NO=CANCEL]");
+        // CALCULAR FACTURA
+        subt = precio*cant;
+        suma +=subt;// acumulador
+        num ++;// contador
+        }
+        //CALCULAR TOTALES FACTURA
+        desc=suma*0.10;
+        iva=(suma-desc)*0.19;
+        netop=suma-desc+iva;
+        //SALIDA
+        document.write("***************************************************"+"<br>");
+        document.write("***************"+"ALMACEN MERKACOSTA"+"**************"+"<br>"+"<br>");
+        document.write("**************"+"SU FACTURA POS"+"**************"+"<br>"+"<br>");
+        document.write("PRODUCTOS COMPRADOS:"+(num-1)+"<br>"+"<br>");
+        document.write("SUBTOTAL:"+"<br>"+"<br>");
+        document.write(suma.toFixed(0)+"<br>"+"<br>");
+        document.write("DESCUENTO:"+"<br>"+"<br>");
+        document.write(desc.toFixed(0)+"<br>"+"<br>");
+        document.write("IVA"+"<br>"+"<br>");
+        document.write(iva.toFixed(0)+"<br>"+"<br>");
+        document.write("NETO A PAGAR:"+"<br>"+"<br>");
+        document.write(netop.toFixed(0)+"<br>"+"<br>");
+        document.write("*****************"+"ATENDIDO POR:"+nom_std+"**************"+"<br>"+"<br>");
+        document.write("*****************"+"GRACIAS POR SU COMPRA"+"**************"+"<br>");
+        </script>
+    </center>
+</body>
+</html>
