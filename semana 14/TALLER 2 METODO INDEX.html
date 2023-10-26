@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METODO INDEX OF</title>
+    <!-- link de sitio Sweetalert mensajes más elegantes-->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <img src="./img/incap 13.jpeg" alt="" width="150" height="150">
+        <h1>METODO INDEX OF</h1>
+        <h2>BUSQUEDA DE ELEMENTOS EN ARRAY</h2>
+        <br><br>
+        <h3>ESTUDIANTE SE ENCUENTRA EN EL INDICE No.</h3>
+        <p id="std"></p>
+        <script>
+            let num;
+            let std=new Array();
+            // CAPTURA ARRAY
+            num=parseInt(prompt("INGRESE CANTIDAD DE NOMBRES STD EN ARRAYS"));
+            for (i=0;i<num;i++){
+                std[i]=prompt("INGRESE NOMBRE STD");
+            }
+            // BUSCAR STD EN ARRAYS
+            let datob=prompt("INGRESE NOMBRE STD A BUSCAR...");
+            //INDICE DE ELEMENTO
+            let find=std.indexOf(datob.trim());
+            //SI EL ESTUDIANTE ES ENCONTRADO =0 // DE LO CONTRARIO = -1
+            if (find>-1){
+                swal("Apreciado usuario","Estudiante fué encontrado en array","success")
+                document.getElementById("std").innerHTML=find +"..."+datob;
+            }else{
+                swal("Apreciado usuario","Estudiante NO fué encontrado en array","error")
+                document.getElementById("std").innerHTML="ERROR STD NO ENCONTRADO ..."+datob;
+            }
+        </script>
+    </center>
+</body>
+</html>
